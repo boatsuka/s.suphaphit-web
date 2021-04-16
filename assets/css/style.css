@@ -254,6 +254,17 @@ h1 {
 	transform: translateY(-15px);
 }
 
+/* Section Footer */
+.footer {
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    color:#333;
+}
+
+.footer a {
+  margin: 0 10px;
+}
+
 /* Section Response Type Tablets and Under */
 @media only screen and (max-width: 768px) {
 	.grid,
