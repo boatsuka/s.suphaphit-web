@@ -35,8 +35,6 @@ const fetchCovidGlobal = (url) => {
 				new Intl.NumberFormat().format(data.recovered.value) + " คน"
 			document.getElementById("deaths-global").innerHTML =
 				new Intl.NumberFormat().format(data.deaths.value) + " คน"
-			document.getElementById("date-global").innerHTML =
-				"อัพเดทเมื่อวันที่ " + data.lastUpdate
 		})
 	})
 }
