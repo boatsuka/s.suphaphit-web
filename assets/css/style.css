@@ -9,72 +9,127 @@
 
 /* Section Html Body Element Settings */
 * {
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-    box-sizing: border-box;
-    font-family: "Athiti", "Poppins";
+	margin: 0;
+	padding: 0;
+	color: #333;
+	line-height: 1.6;
+	box-sizing: border-box;
+	font-family: "Athiti", "Poppins";
 }
 
 ul {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 h1 {
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 10px 0;
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 10px 0;
 }
 
 /* Section Navbar */
 .navbar {
-    height: 70px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  height: 70px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar ul {
-    display: flex;
+  display: flex;
 }
 
 .navbar a {
-    margin: 0 5px;
-    padding: 10px;
-}
-
-.navbar a:hover {
-    border-bottom: 2px #fff solid;
+  margin: 0 5px;
+  padding: 10px;
 }
 
 .navbar .flex {
-    justify-content: space-between;
+  justify-content: space-between;
+}
+
+
+/* Section Box */
+.box {
+  height: 400px;
+  position: relative;
+}
+
+.box h1 {
+  font-size: 40px;
+}
+
+.box p {
+  margin: 20px 0;
+}
+
+.box .grid {
+  overflow: visible;
+  grid-template-columns: 55% auto;
+  gap: 30px;
+}
+
+.box-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+}
+
+.box::before,
+.box::after {
+  content: '';
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
 }
 
 
 /* Section Response Type Tablets and Under */
 @media only screen and (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
+	.grid,
+	.box .grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+	}
+
+	.box {
+		height: auto;
+	}
+
+	.box-text {
+		text-align: center;
+	}
+
+	.box-form {
+		justify-self: center;
+		margin: auto;
+	}
 }
 
 /* Section Response Type Mobile */
 @media only screen and (max-width: 500px) {
-  .navbar {
-    height: 110px;
-  }
+	.navbar {
+		height: 110px;
+	}
 
-  .navbar .flex {
-    flex-direction: column;
-  }
+	.navbar .flex {
+		flex-direction: column;
+	}
 
-  .navbar ul {
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.01);
-  }
+	.navbar ul {
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.01);
+	}
+
+    .box-form {
+        width: 300px;
+    }
 }
