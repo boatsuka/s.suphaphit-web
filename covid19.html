@@ -1,118 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" rel="preload" href="assets/css/style.css" as="style" />
-		<title>Covid19</title>
-	</head>
-	<body>
-		<!-- Navbar Section -->
-		<section class="navbar">
-			<div class="container flex">
-				<h1>S.Suphaphit</h1>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="profile.html">Profile</a></li>
-                        <li><a href="covid19.html">Covid19</a></li>
-					</ul>
-				</nav>
-			</div>
-		</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" rel="preload" href="assets/css/style.css" as="style" />
+    <title>Covid19</title>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <section class="navbar">
+      <div class="container flex">
+        <h1>S.Suphaphit</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="covid19.html">Covid19</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
 
-        <!-- Box Section -->
-		<section class="box">
-			<div class="container grid">
-				<div class="box-text text-center">
-					<h1>สถานการณ์ Covid-19 </h1>
-					<p>อัพเดทสถานการณ์ Covid-19 ทั้งในประเทศไทย และทั้วโลก</p>
-					<h4 id="date-th"></h4>
-				</div>
-			</div>
-		</section>
+    <!-- Box Section -->
+    <section class="box">
+      <div class="container grid">
+        <div class="box-text text-center">
+          <h1>สถานการณ์ Covid-19</h1>
+          <p>อัพเดทสถานการณ์ Covid-19 ทั้งในประเทศไทย และทั้วโลก</p>
+          <h4 id="date-th"></h4>
+        </div>
+      </div>
+    </section>
 
-		<!-- Card Section -->
-		<section class="box-card">
-			<h1 class="md text-center">สถานการณ์การติดเชื้อ Covid-19 ทั่วโลก</h1>
-			<div class="container flex">
-				<div class="card">
-					<h4>ผู้ติดเชื้อทั้งหมด</h4>
-					<img
-						src="assets/image/patient.svg"
-						alt="confirmed"
-					/>
-                    <h4 id="confirmed-global"></h4>
-				</div>
-				<div class="card">
-					<h4>ผู้ติดเชื้อที่หายป่วยแล้ว</h4>
-					<img
-						src="assets/image/hospital.svg"
-						alt="recovered"
-					/>
-                    <h4 id="recovered-global"></h4>
-				</div>
-				<div class="card">
-					<h4>ผู้เสียชีวิต</h4>
-					<img
-						src="assets/image/death.svg"
-						alt="deaths"
-					/>
-                    <h4 id="deaths-global"></h4>
-				</div>
-			</div>
-		</section>
+    <!-- Card Section -->
+    <section class="box-card">
+      <h1 class="md text-center">สถานการณ์การติดเชื้อ Covid-19 ทั่วโลก</h1>
+      <div class="container flex">
+        <div class="card">
+          <h4>ผู้ติดเชื้อทั้งหมด</h4>
+          <img src="assets/image/patient.svg" alt="confirmed" />
+          <h4 id="confirmed-global"></h4>
+        </div>
+        <div class="card">
+          <h4>ผู้ติดเชื้อที่หายป่วยแล้ว</h4>
+          <img src="assets/image/hospital.svg" alt="recovered" />
+          <h4 id="recovered-global"></h4>
+        </div>
+        <div class="card">
+          <h4>ผู้เสียชีวิต</h4>
+          <img src="assets/image/death.svg" alt="deaths" />
+          <h4 id="deaths-global"></h4>
+        </div>
+      </div>
+    </section>
 
-        <section class="box-card">
-			<h1 class="md text-center">สถานการณ์การติดเชื้อ Covid-19 ในประเทศไทย</h1>
-			<div class="container flex">
-				<div class="card">
-					<h4>ผู้ติดเชื้อทั้งหมด</h4>
-					<img
-						src="assets/image/patient.svg"
-						alt="confirmed"
-					/>
-                    <h4 id="confirmed-th"></h4>
-				</div>
-				<div class="card">
-					<h4>ผู้ติดเชื้อที่หายป่วยแล้ว</h4>
-					<img
-						src="assets/image/hospital.svg"
-						alt="recovered"
-					/>
-                    <h4 id="recovered-th"></h4>
-				</div>
-				<div class="card">
-					<h4>ผู้เสียชีวิต</h4>
-					<img
-						src="assets/image/death.svg"
-						alt="deaths"
-					/>
-                    <h4 id="deaths-th"></h4>
-				</div>
-			</div>
-		</section>
+    <section class="box-card">
+      <h1 class="md text-center">สถานการณ์การติดเชื้อ Covid-19 ในประเทศไทย</h1>
+      <div class="container flex">
+        <div class="card">
+          <h4>ผู้ติดเชื้อทั้งหมด</h4>
+          <img src="assets/image/patient.svg" alt="confirmed" />
+          <h4 id="confirmed-th"></h4>
+        </div>
+        <div class="card">
+          <h4>ผู้ติดเชื้อที่หายป่วยแล้ว</h4>
+          <img src="assets/image/hospital.svg" alt="recovered" />
+          <h4 id="recovered-th"></h4>
+        </div>
+        <div class="card">
+          <h4>ผู้เสียชีวิต</h4>
+          <img src="assets/image/death.svg" alt="deaths" />
+          <h4 id="deaths-th"></h4>
+        </div>
+      </div>
+    </section>
 
-        <!-- Footer Section -->
-        <section>
-			<footer class="footer py-5">
-				<div class="container grid grid-3">
-					<div>
-						<h1>S.Suphaphit</h1>
-						<p>Copyright &copy; 2020</p>
-					</div>
-					<nav>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="profile.html">Profile</a></li>
-							<li><a href="covid19.html">Covid19</a></li>
-						</ul>
-					</nav>
-				</div>
-			</footer>
-		</section>
+    <!-- Footer Section -->
+    <section>
+      <footer class="footer py-5">
+        <div class="container grid grid-3">
+          <div>
+            <h1>S.Suphaphit</h1>
+            <p>Copyright &copy; 2020</p>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="covid19.html">Covid19</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </section>
 
-        <script src="assets/js/app.js" defer></script>
-	</body>
+    <script src="assets/js/app.min.js" defer></script>
+  </body>
 </html>

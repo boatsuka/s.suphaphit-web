@@ -1,43 +1,47 @@
-const fetchCovidTH = (url) => {
-	fetch(url)
-		.then((response) => {
-			if (response.status !== 200) {
-				console.log("Look like there was a problem. Status Code: " + response.status)
-				return response.json()
-			}
-			response.json().then(function (data) {
-				document.getElementById("confirmed-th").innerHTML =
-					new Intl.NumberFormat().format(data.confirmed.value) + " คน"
-				document.getElementById("recovered-th").innerHTML =
-					new Intl.NumberFormat().format(data.recovered.value) + " คน"
-				document.getElementById("deaths-th").innerHTML =
-					new Intl.NumberFormat().format(data.deaths.value) + " คน"
-				document.getElementById("date-th").innerHTML =
-					"อัพเดทเมื่อวันที่ " + data.lastUpdate
-			})
-		})
-		.catch((error) => {
-			throw new error()
-		})
-}
+(function () {
 
-const fetchCovidGlobal = (url) => {
-	fetch(url).then((response) => {
-		if (response.status !== 200) {
-			console.log("Look like there was a problem. Status Code: " + response.status)
-			return response.json()
-		}
+	`use strict`
 
-		response.json().then(function (data) {
-			document.getElementById("confirmed-global").innerHTML =
-				new Intl.NumberFormat().format(data.confirmed.value) + " คน"
-			document.getElementById("recovered-global").innerHTML =
-				new Intl.NumberFormat().format(data.recovered.value) + " คน"
-			document.getElementById("deaths-global").innerHTML =
-				new Intl.NumberFormat().format(data.deaths.value) + " คน"
-		})
-	})
-}
+  const fetchCovidTH = (url) => {
+    fetch(url)
+      .then((response) => {
+        if (response.status !== 200) {
+          console.log('Look like there was a problem. Status Code: ' + response.status)
+          return response.json()
+        }
+        response.json().then(function (data) {
+          document.getElementById('confirmed-th').innerHTML =
+            new Intl.NumberFormat().format(data.confirmed.value) + ' คน'
+          document.getElementById('recovered-th').innerHTML =
+            new Intl.NumberFormat().format(data.recovered.value) + ' คน'
+          document.getElementById('deaths-th').innerHTML =
+            new Intl.NumberFormat().format(data.deaths.value) + ' คน'
+          document.getElementById('date-th').innerHTML = 'อัพเดทเมื่อวันที่ ' + data.lastUpdate
+        })
+      })
+      .catch((error) => {
+        throw new error()
+      })
+  }
 
-fetchCovidTH("https://covid19.mathdro.id/api/countries/TH")
-fetchCovidGlobal("https://covid19.mathdro.id/api")
+  const fetchCovidGlobal = (url) => {
+    fetch(url).then((response) => {
+      if (response.status !== 200) {
+        console.log('Look like there was a problem. Status Code: ' + response.status)
+        return response.json()
+      }
+
+      response.json().then(function (data) {
+        document.getElementById('confirmed-global').innerHTML =
+          new Intl.NumberFormat().format(data.confirmed.value) + ' คน'
+        document.getElementById('recovered-global').innerHTML =
+          new Intl.NumberFormat().format(data.recovered.value) + ' คน'
+        document.getElementById('deaths-global').innerHTML =
+          new Intl.NumberFormat().format(data.deaths.value) + ' คน'
+      })
+    })
+  }
+
+  fetchCovidTH('https://covid19.mathdro.id/api/countries/TH')
+  fetchCovidGlobal('https://covid19.mathdro.id/api')
+})()
