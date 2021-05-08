@@ -1,11 +1,18 @@
 /* Table Settings */
 /* 
-1.Section Html Body Element Settings 
-2.Section Navbar
-3.Section Box
+  1.Section Html Body Element Settings 
+  2.Section Utilies
+  3.Section Navbar
+  4.Section Box
+  5.Text sizes
+  6.Margin 
+  7.Padding
+  8.Section Box Card
+  9.Section Footer
+  10.Section Response Type Tablets and Under
+  11.Section Response Type Mobile
 */
 
-@import url('https://fonts.googleapis.com/css?family=Athiti:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Prompt:400,500,600,700&display=swap');
 
 /* Section Html Body Element Settings */

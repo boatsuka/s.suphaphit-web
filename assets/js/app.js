@@ -13,8 +13,8 @@
 		deathsGlobal = document.querySelector(`#deaths-global`)
 
 	//? function fetchCovidTH
-	function fetchCovidTH (url) {
-		fetch(url)
+	async function fetchCovidTH(url) {
+		await fetch(url)
 			.then((response) => {
 				if (response.status !== 200) {
 					return response.json()
@@ -34,24 +34,27 @@
 	}
 
 	//? function fetchCovidGlobal
-	function fetchCovidGlobal(url) {
-		fetch(url).then((response) => {
-			if (response.status !== 200) {
-				return response.json()
-			}
-			response.json().then(function (data) {
-				confirmedGlobal.innerHTML =
-					new Intl.NumberFormat().format(data.confirmed.value) + " คน"
-				recoveredGlobal.innerHTML =
-					new Intl.NumberFormat().format(data.recovered.value) + " คน"
-				deathsGlobal.innerHTML = new Intl.NumberFormat().format(data.deaths.value) + " คน"
+	async function fetchCovidGlobal(url) {
+		await fetch(url)
+			.then((response) => {
+				if (response.status !== 200) {
+					return response.json()
+				}
+				response.json().then(function (data) {
+					confirmedGlobal.innerHTML =
+						new Intl.NumberFormat().format(data.confirmed.value) + " คน"
+					recoveredGlobal.innerHTML =
+						new Intl.NumberFormat().format(data.recovered.value) + " คน"
+					deathsGlobal.innerHTML =
+						new Intl.NumberFormat().format(data.deaths.value) + " คน"
+				})
 			})
-		})
-    .catch((error) => {
-      throw new error
-    })
+			.catch((error) => {
+				throw new error()
+			})
 	}
-
+    
+	//! Use Function
 	fetchCovidTH("https://covid19.mathdro.id/api/countries/TH")
 	fetchCovidGlobal("https://covid19.mathdro.id/api")
 })()
